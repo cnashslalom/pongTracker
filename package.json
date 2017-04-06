@@ -20,7 +20,7 @@
   "devDependencies": {
     "@types/es6-shim": "^0.31.32",
     "@types/jasmine": "^2.5.43",
-    "@types/node": "^7.0.5",
+    "@types/node": "^7.0.12",
     "autoprefixer": "^6.7.3",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.3.2",

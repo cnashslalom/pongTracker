@@ -1,3 +1,7 @@
 <div class="main-container">
   <fountain-header></fountain-header>
+  <div *ngFor="let game of games">
+  	{{game._id}}
+  </div>
+  <b (click)="createGame()">click me</b>
 </div>

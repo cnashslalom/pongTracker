@@ -15,6 +15,7 @@ module.exports = function (server) {
   });
 
   router.post('/', function(req, res) {
+    console.log(req.body);
     if (!req.body.a1 || !req.body.b1 || !req.body.a_score || !req.body.b_score 
       || !req.body.created_user || !req.body.verified_user) {
       res.status(400).send("Please enter required fields");
@@ -29,7 +30,7 @@ module.exports = function (server) {
       b_score: req.body.b_score,
       doubles: req.body.doubles,
       created_user: req.body.created_user,
-      updated_user: req.body.updated_user,
+      updated_user: req.body.updated_user ? req.body.updated_user : req.body.created_user,
       verified_user: req.body.verified_user,
       location: req.body.location,
       created_at: Date.now(),

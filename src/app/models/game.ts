@@ -15,16 +15,17 @@ export class Game {
   updated_at: Date;
 
   static asGame(json: any) {
-      return new Game(json._id, json.a1, json.a2, json.b1, json.b2, 
-        json.a_score, json.b_score, json.doubles, json.created_user, 
-        json.verified_user, json.updated_user, json.location, json.created_at, 
-        json.updated_at);
+    return new Game(json._id, json.a1, json.a2, json.b1, json.b2, 
+      json.a_score, json.b_score, json.doubles, json.created_user, 
+      json.verified_user, json.updated_user, json.location, json.created_at, 
+      json.updated_at);
   }
 
-  constructor(_id: string, a1: string, a2: string, b1: string, b2: string, 
-    a_score: string, b_score: string, doubles: string, created_user: string, 
-    verified_user: string, updated_user: string, location: string, 
-    created_at: Date, updated_at: Date) {
+  constructor(_id: string = null, a1: string = null, a2: string = null, 
+    b1: string = null, b2: string = null, a_score: string = null, 
+    b_score: string = null, doubles: string = null, created_user: string = null, 
+    verified_user: string = null, updated_user: string = null, 
+    location: string = null, created_at: Date = null, updated_at: Date = null) {
 
     this._id = _id;
     this.a1 = a1;

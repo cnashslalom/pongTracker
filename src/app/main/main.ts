@@ -12,6 +12,7 @@ import { ApiService } from '../shared/api.service'
 })
 export class MainComponent {
 	games: Game[];
+	game: Game;
 
 	constructor(private route: ActivatedRoute,
 	            private router: Router,
@@ -19,6 +20,7 @@ export class MainComponent {
 	}
 
 	ngOnInit(): void {
+		this.game = new Game();
 		this.apiService.getAllGames().subscribe(
 			games => {
 				this.games = games;
